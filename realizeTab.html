@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>css实现tab切换</title>
+        <style>
+            .wrap {
+                display: flex;
+            }
+            .changetab1,
+            .changetab2,
+            .changetab3 {
+                border: 1px solid #D7D7D7;
+                height: 30px;
+                width: 180px;
+                text-align: center;
+                line-height: 30px;
+                background-color: #ECECEC;
+            }
+            .changetab1,
+            .changetab2 {
+                border-right: 0;
+            }
+            input {
+                display: none;
+            }
+            input:checked + label {
+                background-color: white;
+                border-bottom: none;
+            }
+            .tab1,
+            .tab2,
+            .tab3 {
+                position: absolute;
+                top: 39px;
+                width: 544px;
+                height: 250px;
+                border: 1px solid #D7D7D7;
+                border-top: none;
+                display: none;
+                padding: 7px;
+                box-sizing: border-box;
+            }
+            input:checked + label + div {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="wrap">
+                <input type="radio" id="input1" name="input" checked>
+                <label for="input1" class="changetab1">选项卡1</label>
+                <div class="tab1">我是选项卡1</div>
+
+                <input type="radio" id="input2" name="input">
+                <label for="input2" class="changetab2">选项卡2</label>
+                <div class="tab2">我的选项卡2</div>
+
+                <input type="radio" id="input3" name="input">
+                <label class="changetab3" for="input3">选项卡3</label>
+                <div class="tab3">我是选项卡3</div>
+            </div>
+        </div>
+    </body>
+</html>
